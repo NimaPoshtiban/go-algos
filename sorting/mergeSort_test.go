@@ -10,7 +10,7 @@ import (
 var numbers = make([]int, 5)
 
 func TestMergeSort(t *testing.T) {
-	rand.Seed(time.Now().Unix())
+	rand.Seed(time.Now().UnixNano())
 	for i := 0; i < len(numbers); i++ {
 		numbers[i] = rand.Intn(100)
 	}

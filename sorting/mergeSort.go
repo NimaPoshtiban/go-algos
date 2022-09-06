@@ -35,7 +35,7 @@ func merge(numbers []int, p, q, r int) {
 	}
 }
 // Merge Sort Algorithm
-// Sorts the array in O(n)
+// Sorts the array in O(nlgn)
 func MergeSort(list []int, p, r int) {
 	if p >= r {
 		return
