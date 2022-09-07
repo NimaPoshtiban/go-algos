@@ -7,17 +7,16 @@ import (
 	"time"
 )
 
+var list = make([]int, 5)
 
-func TestInsertionSort(t *testing.T) {
-	var list = make([]int, 5)
-
+func TestBubbleSort(t *testing.T) {
 	rand.Seed(time.Now().UnixNano())
 	for i := 0; i < 5; i++ {
 		list[i] = rand.Intn(100)
 	}
-	result := InsertionSort(list)
-	if !sort.SliceIsSorted(result, func(i, j int) bool {
-		return result[i] < result[j]
+	BubbleSort(list)
+	if !sort.SliceIsSorted(list, func(i, j int) bool {
+		return list[i] < list[j]
 	}) {
 		t.Log(list)
 		t.Errorf("Slice is not sorted")
