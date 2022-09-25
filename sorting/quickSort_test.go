@@ -7,12 +7,12 @@ import (
 	"time"
 )
 
-func TestMergeSort(t *testing.T) {
+func TestQuickSort(t *testing.T) {
 	rand.Seed(time.Now().UnixNano())
 	for i := 0; i < len(list); i++ {
 		list[i] = rand.Intn(100)
 	}
-	MergeSort(list, 0, 4)
+	QuickSort(list, 0, len(list)-1)
 	if !sort.SliceIsSorted(list, func(i, j int) bool {
 		return list[i] < list[j]
 	}) {

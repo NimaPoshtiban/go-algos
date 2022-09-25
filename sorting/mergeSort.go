@@ -25,22 +25,23 @@ func merge(numbers []int, p, q, r int) {
 		k++
 	}
 
-	for ;i < nl;i++ {
+	for ; i < nl; i++ {
 		numbers[k] = L[i]
 		k++
 	}
-	for ;j < nr;j++ {
+	for ; j < nr; j++ {
 		numbers[k] = R[j]
 		k++
 	}
 }
+
 // Merge Sort Algorithm
 // Sorts the array in O(nlgn)
 func MergeSort(list []int, p, r int) {
 	if p >= r {
 		return
 	}
-	q := p + (r-p) / 2
+	q := p + (r-p)/2
 	MergeSort(list, p, q)
 	MergeSort(list, q+1, r)
 	merge(list, p, q, r)

@@ -7,12 +7,9 @@ import (
 	"time"
 )
 
-
 func TestInsertionSort(t *testing.T) {
-	var list = make([]int, 5)
-
 	rand.Seed(time.Now().UnixNano())
-	for i := 0; i < 5; i++ {
+	for i := 0; i < len(list); i++ {
 		list[i] = rand.Intn(100)
 	}
 	result := InsertionSort(list)

@@ -1,9 +1,8 @@
 package sorting
-//
-//	Sorts the given array of Integers 
-//	Best Case: O(n)
-//	Worst Case: O(n^2)
-//
+
+// Sorts the given array of Integers
+// Best Case: O(n)
+// Worst Case: O(n^2)
 func InsertionSort(list []int) []int {
 	for i := 0; i < len(list); i++ {
 		key := list[i]
